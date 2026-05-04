@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Odpočet do konce školního roku</title>
+
     <style>
         body {
             margin: 0;
@@ -15,6 +16,7 @@
             height: 100vh;
             text-align: center;
         }
+
         .container {
             background: rgba(0,0,0,0.25);
             padding: 50px;
@@ -22,14 +24,17 @@
             backdrop-filter: blur(12px);
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
+
         h1 {
             margin-bottom: 20px;
             font-size: 2em;
         }
+
         #countdown {
             font-size: 2.8em;
             font-weight: bold;
         }
+
         .sub {
             margin-top: 15px;
             opacity: 0.8;
@@ -37,6 +42,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>⏳ Odpočet do konce školního roku</h1>
@@ -45,14 +51,14 @@
     </div>
 
     <script>
-        const targetDate = new Date("2026-06-26T10:00:00+02:00").getTime();
+        const targetDate = new Date("2026-06-26T00:00:00").getTime();
 
         function updateCountdown() {
             const now = new Date().getTime();
             const diff = targetDate - now;
 
             if (diff <= 0) {
-                document.getElementById("countdown").innerHTML = "🎉 Time Ended";
+                document.getElementById("countdown").innerHTML = "🎉 Konec!";
                 return;
             }
 
